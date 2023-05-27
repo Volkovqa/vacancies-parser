@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 import requests
 import os
-from saver import JSONsaver
+from saver import JSONSaver
 
 
 class APISample(ABC):
@@ -39,6 +39,6 @@ class SuperJob(APISample):
         }
 
     def get_request(self):
-        SJ_secret_api_key = os.environ["SJ_SAP"]
-        headers = {"X-Api-App-Id": SJ_secret_api_key
+        sj_secret_api_key = os.environ["SJ_SAP"]
+        headers = {"X-Api-App-Id": sj_secret_api_key}
         return requests.get(self.url, headers=headers, params=self.params)
