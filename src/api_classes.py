@@ -10,6 +10,10 @@ class APISample(ABC):
     def get_request(self):
         pass
 
+    @staticmethod
+    def get_json_saver(filename):
+        return JSONSaver(filename)
+
 
 class HHru(APISample):
 
@@ -26,7 +30,7 @@ class HHru(APISample):
 
 class SuperJob(APISample):
 
-    def __init__(self, keyword, page):
+    def __init__(self, keyword, page=1):
         self.url = "https://api.superjob.ru/2.0/vacansies"
 
         self.params = {
