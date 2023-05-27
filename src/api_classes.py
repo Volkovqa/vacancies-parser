@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 import requests
 import os
-from saver import JSONSaver
+from src.saver import JSONSaver
 
 
 class APISample(ABC):
@@ -18,7 +18,7 @@ class APISample(ABC):
 class HHru(APISample):
 
     def __init__(self, keyword, page=0):
-        self.url = "https://api.hh.ru.vacancies"
+        self.url = "https://api.hh.ru/vacancies"
         self.params = {
             "text": keyword,
             "page": page
@@ -31,7 +31,7 @@ class HHru(APISample):
 class SuperJob(APISample):
 
     def __init__(self, keyword, page=1):
-        self.url = "https://api.superjob.ru/2.0/vacansies"
+        self.url = "https://api.superjob.ru/2.0/vacancies/"
 
         self.params = {
             "keywords": keyword,

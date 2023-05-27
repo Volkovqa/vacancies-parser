@@ -18,7 +18,7 @@ def main():
         for vacancy in hh_vacancies:
             hh_saver.insert(vacancy)
 
-        sj_vacancies = sj_engine.get_request().json()["items"]
+        sj_vacancies = sj_engine.get_request().json()["objects"]
         for vacancy in sj_vacancies:
             sj_saver.insert(vacancy)
 
@@ -64,4 +64,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

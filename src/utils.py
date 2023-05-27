@@ -1,6 +1,6 @@
-from vacancy_classes import Vacancy
-from vacancy_classes import HHVacancy
-from vacancy_classes import SJVacancy
+from src.vacancy_classes import Vacancy
+from src.vacancy_classes import HHVacancy
+from src.vacancy_classes import SJVacancy
 
 
 def sorting(vacancies: list[Vacancy]) -> list[Vacancy]:
