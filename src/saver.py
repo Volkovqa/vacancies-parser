@@ -41,6 +41,10 @@ class JSONSaver(Saver, FileManagerMixin):
     def __init__(self, file_path):
         self.data_file = file_path
 
+    @staticmethod
+    def get_json_saver(filename):
+        return JSONSaver(filename)
+
     @property
     def data_file(self):
         return self.__data_file

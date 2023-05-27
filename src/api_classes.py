@@ -10,10 +10,6 @@ class APISample(ABC):
     def get_request(self):
         pass
 
-    @staticmethod
-    def get_json_saver(filename):
-        return JSONSaver(filename)
-
 
 class HHru(APISample):
 
