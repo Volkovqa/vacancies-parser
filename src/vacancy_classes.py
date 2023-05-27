@@ -1,6 +1,6 @@
 class Vacancy:
 
-    __slots__ = ["__title", "__link", "__description", "__salary", "__city"]
+    __slots__ = ["__title", "__link", "__description", "__salary"]
 
     def __init__(self, title, link, description, salary) -> None:
         self.title = title
