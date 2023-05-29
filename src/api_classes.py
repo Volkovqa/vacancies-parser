@@ -6,6 +6,8 @@ from src.saver import JSONSaver
 
 class APISample(ABC):
 
+    """Абстрактный класс для работы с API разных платформ"""
+
     @abstractmethod
     def get_request(self):
         pass
@@ -16,6 +18,8 @@ class APISample(ABC):
 
 
 class HHru(APISample):
+
+    """Класс для работы с API платформы HeadHunter"""
 
     def __init__(self, keyword, page=0):
         self.url = "https://api.hh.ru/vacancies"
@@ -29,6 +33,8 @@ class HHru(APISample):
 
 
 class SuperJob(APISample):
+
+    """Класс для работы с API платформы SuperJob"""
 
     def __init__(self, keyword, page=1):
         self.url = "https://api.superjob.ru/2.0/vacancies/"
