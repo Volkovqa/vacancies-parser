@@ -4,6 +4,9 @@ import os
 
 
 class Saver(ABC):
+
+    """Абстрактный класс для работы с файлами записи информации о вакансиях."""
+
     @abstractmethod
     def insert(self, data):
         pass
@@ -18,6 +21,8 @@ class Saver(ABC):
 
 
 class FileManagerMixin:
+
+    """Класс-миксин для работы с файлами"""
 
     @staticmethod
     def _connect(filename) -> None:
@@ -37,6 +42,8 @@ class FileManagerMixin:
 
 
 class JSONSaver(Saver, FileManagerMixin):
+
+    """Класс для работы с файлами формата JSON."""
 
     def __init__(self, file_path):
         self.data_file = file_path
