@@ -82,7 +82,7 @@ class JSONSaver(Saver, FileManagerMixin):
                 result.append(entry)
 
         with open(self.__data_file, "w", encoding="utf-8") as file:
-            json.dump(result, file)
+            json.dump(result, file, indent=4, ensure_ascii=False)
 
     def clear_data(self):
         with open(self.__data_file, "w") as file:
